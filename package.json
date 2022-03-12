@@ -1,0 +1,27 @@
+{
+  "name": "jeffsmotorcycles",
+  "version": "1.0.0",
+  "description": "Project 2 SDI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshlynj/JeffsMotorcycles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshlynj/JeffsMotorcycles/issues"
+  },
+  "homepage": "https://github.com/joshlynj/JeffsMotorcycles#readme",
+  "dependencies": {
+    "cypress": "^9.5.1",
+    "dotenv": "^16.0.0",
+    "env": "^0.0.2",
+    "jest": "^27.5.1",
+    "knex": "^1.0.3",
+    "morgan": "^1.10.0"
+  }
+}
