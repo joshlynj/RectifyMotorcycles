@@ -1,10 +1,11 @@
 import React from 'react';
 import { useContext } from 'react';
+import './forms.css';
 
 
 export default function Register (){
     return(
-    <>
+    <div className="forms">
         <h1>Register Your Account</h1>
             <form>
                 <p>
@@ -36,7 +37,7 @@ export default function Register (){
                     <input for="phoneNumber" type="text"/>
                 </p>
             </form>
-    </> 
+    </div> 
     ) 
 
 };

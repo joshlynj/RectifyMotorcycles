@@ -1,0 +1,8 @@
+.forms { 
+    text-align: center;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+}

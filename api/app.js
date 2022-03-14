@@ -49,17 +49,25 @@ app.delete('/:table/:id', function(req, res) {
   })
 });
 
-app.patch('/:table/:id', function(req, res) {
-  knex(req.params.table).where({ id: req.params.id}).update(req.query)
+app.patch('/services/:id', function(req, res) {
+  const {service, cost} = req.body;
+  knex('services').where({ id: req.params.id}).update({service: service, cost: cost})
   .then((data) => res.status(200).json(data))
     .catch((err) => {
       console.error(err);
       res.status(404).json({ message: "Something is wrong." })
   })
 });
-
-
-
+// {user_id: 1, service_id: 1, completion_status: false, part: 'Carburetor', make: null, model: null, year: null}
+app.patch('/orders/:id', function(req, res) {
+  const {completion_status} = req.body;
+  knex('orders').where({ id: req.params.id}).update({completion_status: completion_status})
+  .then((data) => res.status(200).json(data))
+    .catch((err) => {
+      console.error(err);
+      res.status(404).json({ message: "Something is wrong." })
+  })
+});
 
 
 app.post('/services', function(req, res) {

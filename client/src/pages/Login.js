@@ -1,11 +1,12 @@
 import React from 'react';
 // import { useContext } from 'react';
 import Register from './Register.js';
-
+import { Link } from 'react-router-dom';
+import './forms.css';
 
 export default function Login (){
     return(
-    <>
+    <div className="forms">
         <h1>Please Login</h1>
             <form>
                 <p>
@@ -19,11 +20,11 @@ export default function Login (){
             </form>
         <h2>Don't have an account?</h2>
             <form>
-                <p>
-                    <button onClick={() => Register}>Register Here</button>
-                </p>
+                <Link to="/register" element={<Register />}>
+                    <button type="button">Register Here</button>
+                </Link>
             </form>
-    </>
+    </div>
     )
 
 };
