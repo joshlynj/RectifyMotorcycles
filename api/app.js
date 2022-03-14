@@ -1,41 +1,74 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+require("dotenv").config();
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const express = require('express');
+const morgan = require('morgan');
 
-var app = express();
+const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+const knex = require('knex')(require('./knexfile.js')[process.env.NODE_ENV || "development"]);
 
-app.use(logger('dev'));
+app.use(morgan("tiny"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+// get all services
+app.get('/:table', function(req, res) {
+  knex
+    .select('*')
+    .from(req.params.table)
+    .then(data => res.status(200).json(data))
+    .catch(err =>
+      res.status(404).json({
+        message:
+          'The data you are looking for could not be found. Please try again'
+      })
+    );
 });
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+//get services by id 
+app.get('/:table/:id', function(req, res) {
+  knex
+    .select('*')
+    .from(req.params.table)
+    .where({id: req.params.id})
+    .then(data => res.status(200).json(data))
+    .catch(err =>
+      res.status(404).json({
+        message:
+          'The data you are looking for could not be found. Please try again'
+      })
+    );
+});
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+app.delete('/:table/:id', function(req, res) {
+  knex(req.params.table).where({ id: req.params.id}).del()
+    .then((data) => res.status(200).json(data))
+    .catch((err) => {
+      console.error(err);
+      res.status(404).json({ message: "Something is wrong." })
+  })
+});
+
+app.patch('/:table/:id', function(req, res) {
+  knex(req.params.table).where({ id: req.params.id}).update(req.query)
+  .then((data) => res.status(200).json(data))
+    .catch((err) => {
+      console.error(err);
+      res.status(404).json({ message: "Something is wrong." })
+  })
+});
+
+
+
+
+
+app.post('/services', function(req, res) {
+  knex.insert({ name: req.body.name, cost: req.body.cost}).from('services')
+    .then((data) => res.status(201).json(data))
+    .catch((err) => {
+      console.error(err);
+      res.status(404).json({ message: "Something is wrong." })
+  })
 });
 
 module.exports = app;
