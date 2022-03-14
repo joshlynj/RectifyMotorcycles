@@ -20,10 +20,10 @@ export default function Login (){
         <h2>Don't have an account?</h2>
             <form>
                 <p>
-                    <button onCLick={<Register />}>Register Here</button>
+                    <button onClick={() => Register}>Register Here</button>
                 </p>
             </form>
-    </> 
-    ) 
+    </>
+    )
 
 };
