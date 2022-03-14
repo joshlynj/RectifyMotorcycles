@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
-import { 
+import {
     Box,
     Paper,
     Grid,
@@ -14,10 +14,10 @@ export default function Footer() {
         <header className='app-header'>
             <Grid container spacing={0}>
                 <Grid item xs={12}>
-                    <h1>Rectify Motorcycles</h1>
+                    <h1>Rectify Motoworks</h1>
                 </Grid>
                 <Grid item xs={12}>
-                    &copy; Rectify Motorcycles
+                    &copy; Rectify Motoworks
                 </Grid>
             </Grid>
         </header>
