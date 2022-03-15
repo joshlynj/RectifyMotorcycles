@@ -1,6 +1,6 @@
 import React from 'react';
-import { useContext } from 'react';
-import './forms.css';
+// import { useContext } from 'react';
+import './pages.css';
 
 
 export default function Register (){

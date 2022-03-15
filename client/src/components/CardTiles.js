@@ -23,7 +23,7 @@ return(
                 component="img"
                 height="220"
                 image={"https://cdn.vox-cdn.com/thumbor/EEi-oM8bN6jQ0TOAfGPGPJI4SlY=/0x0:5184x3456/1820x1213/filters:focal(2178x1314:3006x2142):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/70264689/AZ4I5423.0.jpg"}
-                alt="error loading"
+                alt="guy riding a motorcycle"
             />
             <CardContent >
                 <Typography  sx={{fontFamily: "monospace"}} data-testid="img-title" gutterBottom variant="h5" maxHeight="300" >

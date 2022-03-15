@@ -7,11 +7,19 @@ require("dotenv").config()
 module.exports = {
 
   development: {
-    client: 'postgresql',
+    client: 'pg',
     connection: process.env.CONNECTION_STRING
    
   },
 
+  //created test environment for unit testing
+  test: {
+    client: 'pg',
+    connection: process.env.CONNECTION_STRING
+   
+  },
+
+  // integration testing (development stage 1)
   staging: {
     client: 'postgresql',
     connection: {

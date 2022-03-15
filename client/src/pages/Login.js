@@ -2,7 +2,7 @@ import React from 'react';
 // import { useContext } from 'react';
 import Register from './Register.js';
 import { Link } from 'react-router-dom';
-import './forms.css';
+import './pages.css';
 
 export default function Login (){
     return(

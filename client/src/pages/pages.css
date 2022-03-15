@@ -1,0 +1,47 @@
+.about-me{
+  display: flex;
+  height: 100%;
+  /* width:100% */
+
+}
+
+#about {
+  background-color: rgb(96, 176, 251);
+  font-size: 2rem;
+}
+
+
+
+.builds{
+  display: flex;
+}
+
+
+.forms { 
+  text-align: center;
+  padding-top: 10em;
+  padding-bottom: 10em;
+  /* display: flex; */
+  /* justify-content: center; */
+  align-items: center;
+}
+
+
+.services-page{
+  text-align: center;
+}
+
+.services-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.service-item{
+  padding: 0 10px;
+}
+
+.service-item img {
+  width: 300px;
+  height: 300px
+}
