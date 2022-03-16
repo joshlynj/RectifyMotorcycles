@@ -12,6 +12,25 @@ The React App has the following functionalities:
 ## 🏞 Background 
 This project was designed for a local business owner who is currently running a business soley off of Instagram. This is intended to take his motorcycle business to the next level. 
 
+## 🏍 Website in Use
+Here is an image of the Home Page:
+![image](https://user-images.githubusercontent.com/96899068/158696609-79da42e2-4d3d-4888-a781-760cdd811b3e.png)
+
+Here is an image of the About me section: 
+![image](https://user-images.githubusercontent.com/96899068/158696853-6a76d52d-d285-43fa-b12b-5f8aa591b3c0.png)
+
+Here is an image of the My Builds section:
+![image](https://user-images.githubusercontent.com/96899068/158696785-8a1ea9be-1804-49fb-9940-84e6eebbe6f6.png)
+
+Here is an image of the Services section: 
+![image](https://user-images.githubusercontent.com/96899068/158696934-9eb2489c-f049-426d-9906-903f619995ca.png)
+
+Here is an image of the Order Form:
+![image](https://user-images.githubusercontent.com/96899068/158697083-337b3dc3-dc84-4f0b-b1d3-2faacb8ce554.png)
+
+Here is an image of Login/Sign Up: 
+![image](https://user-images.githubusercontent.com/96899068/158697171-1ec2617f-f067-492f-b866-3f0d70df013f.png)
+
 ## 🌎 Using the React App
 Get more information about React here: https://reactjs.org/.
 It was styled using some MUI: https://mui.com/.
