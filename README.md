@@ -3,11 +3,11 @@ Rectify Motoworks is a React + Express Full-Stack Application
 
 ## 🎉 UI Features
 The React App has the following functionalities:
-🗺 A home page that has a footer and Navbar to allow for users to easily navigate the webpage. 
-🗣 Users can click the About Me section that describes the owner and his business.
-⛏ Users can click My Builds to see previous work from Rectify Motoworks.
-🧩 Users can login to submit services.
-📤 Users can request a service to be completed by Rectify Motoworks. 
+- 🗺 A home page that has a footer and Navbar to allow for users to easily navigate the webpage. 
+- 🗣 Users can click the About Me section that describes the owner and his business.
+- ⛏ Users can click My Builds to see previous work from Rectify Motoworks.
+- 🧩 Users can login to submit services.
+- 📤 Users can request a service to be completed by Rectify Motoworks. 
 
 ## 🏞 Background 
 This project was designed for a local business owner who is currently running a business soley off of Instagram. This is intended to take his motorcycle business to the next level. 
