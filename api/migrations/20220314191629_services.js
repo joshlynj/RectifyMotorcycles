@@ -12,6 +12,9 @@
 
         //cost
         table.integer("cost");
+
+        //image
+        table.string("image"); 
     });
 }
 /**

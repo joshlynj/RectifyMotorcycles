@@ -14,7 +14,7 @@ import Services from './pages/Services.js';
 import Home from './pages/Home.js';
 import AboutMe from './pages/AboutMe.js';
 import Build from './pages/My-Builds.js';
-
+import OrderForm from './pages/OrderForm';
 
 //Component imports
 import Navbar from './components/Navbar.js';
@@ -34,6 +34,7 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/about-me' element={<AboutMe />} />
           <Route path='/my-builds' element={<Build />} />
+          <Route path='/order-form' element={<OrderForm />} />
         </Routes>
         <Footer />
       </main>

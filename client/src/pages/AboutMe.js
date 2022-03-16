@@ -7,22 +7,20 @@ import './pages.css';
 export default function AboutMe (){
     return(
         <div className='about-me'>
-            {/* <h1>About me:</h1>     */}
-            <img src = {jeff}/>
-            <div id='about'>
-                <p>
-                Restoring, wrenching, and customizing motorcycles has been an obsessive hobby of mine for ten years.
+                <div className='owner'>
+                    <img src = {jeff} alt = 'Jeff Homan, Founder'/>
+                    <h2>Jeff Homan</h2>
+                    <p>Founder of Rectify Motoworks</p>
+                </div>
+                <div className ='description'>
+                    <p>
+                        Restoring, wrenching, and customizing motorcycles has been an obsessive hobby of mine for ten years.
                         Vapor blasting has taken my projects to the next level.
                         Cutting down on extensive hours of polishing and finishing while providing superior results.
                         This is a service I believe all types of projects would benefit from.
-                </p>
-                <p>
-                    <b>Jeff Homan</b> <br/>
-                    Founder of Rectify Motoworks
-                </p>
-                
-             </div>
-             {/* <img src = {jeff2} width = '900' height = '1000'/> */}
+                    </p>
+                    <img src = {jeff2} alt = 'Jeff2'/>
+                </div>
         </div>
     )
 };
