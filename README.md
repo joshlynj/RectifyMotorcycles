@@ -23,7 +23,7 @@ Here is an image of the My Builds section:
 ![image](https://user-images.githubusercontent.com/96899068/158696785-8a1ea9be-1804-49fb-9940-84e6eebbe6f6.png)
 
 Here is an image of the Services section: 
-![image](https://user-images.githubusercontent.com/96899068/158696934-9eb2489c-f049-426d-9906-903f619995ca.png)
+![image](https://user-images.githubusercontent.com/96899068/158697658-5326f977-854f-4949-aea0-99d95284b799.png)
 
 Here is an image of the Order Form:
 ![image](https://user-images.githubusercontent.com/96899068/158697505-d2444f17-f8f4-41dd-8701-d16f914150bb.png)
