@@ -14,22 +14,25 @@ This project was designed for a local business owner who is currently running a 
 
 ## 🏍 Website in Use
 Here is an image of the Home Page:
-![image](https://user-images.githubusercontent.com/96899068/158696609-79da42e2-4d3d-4888-a781-760cdd811b3e.png)
-
+![image](https://user-images.githubusercontent.com/96899068/158739457-11a11a4b-565f-46e3-a5c3-55d9af205d36.png)
 Here is an image of the About me section: 
-![image](https://user-images.githubusercontent.com/96899068/158696853-6a76d52d-d285-43fa-b12b-5f8aa591b3c0.png)
+![image](https://user-images.githubusercontent.com/96899068/158739497-e7a3e0c7-33b9-48b3-85b1-97a75acac31d.png)
 
 Here is an image of the My Builds section:
-![image](https://user-images.githubusercontent.com/96899068/158696785-8a1ea9be-1804-49fb-9940-84e6eebbe6f6.png)
+![image](https://user-images.githubusercontent.com/96899068/158739530-4636c5a9-22a4-4b05-b4a3-0e129e768511.png)
 
 Here is an image of the Services section: 
-![image](https://user-images.githubusercontent.com/96899068/158697658-5326f977-854f-4949-aea0-99d95284b799.png)
+![image](https://user-images.githubusercontent.com/96899068/158739564-542f0d97-6d81-4db9-9734-f38d698c1c17.png)
 
 Here is an image of the Order Form:
-![image](https://user-images.githubusercontent.com/96899068/158697801-013b162c-8dac-4d88-970b-5900f485842b.png)
+![image](https://user-images.githubusercontent.com/96899068/158739624-37670c48-629f-446f-afc4-aa551977a8d9.png)
 
-Here is an image of Login/Sign Up: 
-![image](https://user-images.githubusercontent.com/96899068/158697171-1ec2617f-f067-492f-b866-3f0d70df013f.png)
+Here is an image of Login screen: 
+![image](https://user-images.githubusercontent.com/96899068/158739655-10c46661-2c47-4c9a-94d8-d931b5978fc3.png)
+
+Here is an image of the Register screen:
+![image](https://user-images.githubusercontent.com/96899068/158739687-1da3044f-38aa-4036-a603-fc1df3a0efde.png)
+
 
 ## 🌎 Using the React App
 Get more information about React here: https://reactjs.org/.
