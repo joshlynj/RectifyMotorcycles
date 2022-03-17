@@ -1,11 +1,32 @@
 // require("dotenv").config();
 const dbConnection = require('./controllers/dbConnection');
-
+const cors = require('cors');
 //middleware
 const express = require('express');
 const app = express();
+app.use(cors());
 app.use(express.json());
 const morgan = require('morgan');
+
+// Add headers before the routes are defined
+app.use(function (req, res, next) {
+
+  // Website you wish to allow to connect
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+  // Request headers you wish to allow
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+  // Set to true if you need the website to include cookies in the requests sent
+  // to the API (e.g. in case you use sessions)
+  res.setHeader('Access-Control-Allow-Credentials', true);
+
+  // Pass to next layer of middleware
+  next();
+});
 
 //Hashing
 const { hash, compare } = require("bcrypt");
@@ -97,12 +118,13 @@ app.post('/services', function(req, res) {
 // post to orders
 //{user_id: 1, service_id: 1, completion_status: false, part: 'Carburetor', make: null, model: null, year: null},
 app.post('/orders', function(req, res) {
+  console.log('Order worked');
   dbConnection
 .insert({ user_id: req.body.user_id, service_id: req.body.service_id, completion_status: req.body.completion_status, 
     part: req.body.part, make: req.body.make,  model: req.body.model, year: req.body.year}).from('orders')
     .then((data) => res.status(201).json(data))
     .catch((err) => {
-      console.error(err);
+      console.error(`error here:`, err);
       res.status(404).json({ message: "Something is wrong." })
   })
 });
@@ -157,6 +179,8 @@ app.post("/login", (req,res)=> {
 
         compare(password, hashedPassword)
           .then((isMatch) => {
+            // send whatever back as json object
+            // if 202, useNavigate to whatever page you want
             if (isMatch) res.status(202).json("passwords match");
             // THIS IS THE SUCCESSFUL LOGIN RESPONSE
             else

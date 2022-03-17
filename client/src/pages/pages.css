@@ -38,19 +38,14 @@
 
 
 
-
-
-// About me page css below
-
 .about-me {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   width: 90vw;
   height: 75vh;
-  /* min-width: 1000px; */
-  /* margin: 2% auto; */
+  margin: 2% auto;
   box-shadow: 0 0 15px 2px gray;
-  /* font-size: 2em; */
+  font-size: 2vw;
 }
 
 .owner{
@@ -64,6 +59,8 @@
 
 .owner img{
   height: 100%;
+  width: 100%;
+  max-width: 400px;
 }
 
 .owner h2 {
@@ -80,46 +77,40 @@
 }
 
 .description img {
-  /* width: 75%; */
   margin-top: 5%;
   height: 100%;
-  /* width: 100%; */
-  max-width:800px;
+  width: 95%;
+  max-width:500px;
 }
 
 
-
-#about {
-  background-color: rgb(219, 218, 218);
-  font-size: 2rem;
-}
-
-
-
-// Order-form page CSS below
 
 .forms { 
-  background-color: blue;
   margin: 50px 0;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* .order-form {
-  width: 90vw;
+.order-form {
   padding: 50px 50px;
   margin: 30px 0;
   box-shadow: 0 0 15px 2px gray;
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+}
 
 
+.register-form {
+  padding: 50px 50px;
+  margin: 30px 0;
+  box-shadow: 0 0 15px 2px gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-// Services Page CSS below
 
 .services-page{
   text-align: center;
@@ -142,7 +133,6 @@
 
 
 
-//My Builds Page CSS below
 
 .builds {
   display: flex;

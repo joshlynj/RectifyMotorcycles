@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './pages.css';
 import { Link } from 'react-router-dom';
-import Order from './OrderForm';
+import OrderForm from './OrderForm.js'
+import OrderType1 from './order_by_type/OrderType1.js';
+import OrderType2 from './order_by_type/OrderType2.js';
+import OrderType3 from './order_by_type/OrderType3.js';
+import OrderType4 from './order_by_type/OrderType4.js';
+import OrderType5 from './order_by_type/OrderType5.js';
+import OrderCustom from './order_by_type/OrderCustom.js';
 
 // function fetchAllServices() {
 //     fetch(`${url}${word}`)
@@ -34,13 +40,15 @@ export default function Register (){
         {service: 'Custom Work', cost: null, image:'https://www.aerospecialties.com/app/uploads/2017/05/RBI9900TM-and-RBA2-isolated_01.jpg'}
       ])
 
+      let[totalCost, setTotalCost] = useState([]);
 
-    useEffect(function(){
-        fetch("http://localhost:8080/services")
-        .then(response => response.json())
-        .then((data) => setServices(data))
-        .catch((err) => console.error(err))
-    },[]);
+
+    // useEffect(function(){
+    //     fetch("http://localhost:8080/services")
+    //     .then(response => response.json())
+    //     .then((data) => setServices(data))
+    //     .catch((err) => console.error(err))
+    // },[]);
 
     console.log(services)
 
@@ -50,10 +58,10 @@ export default function Register (){
     //         .then(console.log(res))
     //         .catch((err) => console.error(err));
     // }
-  
-    const totalCost = [];
-
+  ;
+// const totalCost = [];
     return(
+        
         // {(services[0] !== undefined) ? <ServiceContent mapData={shortArray} /> : <Grid item xs={12}> <LinearProgress color="secondary" /> </Grid>}
     <div className='services-page'>
         <h1> Services We Offer </h1>
@@ -61,50 +69,63 @@ export default function Register (){
                 <div className='service-item'>
                     <h2> {services[0].service}</h2>
                     <img src={services[0].image} alt="Carburetor Vapor Blasting"></img>
-                     <h3>Cost: {services.length ? services[0].cost : null }</h3>
-                     <button type="button" onClick={totalCost.push(services[0].cost)}>Add Service</button>
+                     <h3>Cost: ${services[0].cost}</h3>
+                     <Link to="/order-form/" element={<OrderForm />}>
+                        <button type="button">Request Service</button>
+                    </Link> 
                  </div>
                 <div className='service-item'>
-                     <h2> { () => (services[1].name !== undefined) ? services[1].name : services } </h2> 
-                     <h2> {  (services[1].service)} </h2>
+                     {/* <h2> { () => (services[1].name !== undefined) ? services[1].name : services } </h2>  */}
+                     <h2> {(services[1].service)} </h2>
                     <img src={services[1].image}  alt="Engine Case Vapor Blasting"></img>
-                    <h3> Cost: {services[1].cost}</h3>
-                    
+                    {/* {let cost1 = services[1].cost} */}
+                    <h3> Cost: ${services[1].cost}</h3>
+                    <Link to="/order-form/2" element={<OrderType2 />}>
+                        <button type="button" >Request Service</button>
+                    </Link> 
                 </div>
 
                 <div className='service-item'>
                     <h2> {services[2].service} </h2>
                     <img src={services[2].image}  alt="Cylinders/Heads Vapor Blasting "></img>
-                    <h3> Cost: {services[2].cost}</h3>
-                    
+                    <h3> Cost: ${services[2].cost}</h3>
+                    <Link to="/order-form/3" element={<OrderType3 />}>    
+                        <button type="button" >Request Service</button>
+                    </Link> 
                 </div>
 
                 <div className='service-item'>
                     <h2> {services[3].service} </h2>
                     <img src={services[3].image}  alt="Valve Cover Vapor Blasting "></img>
-                    <h3> Cost: {services[3].cost}</h3>
-                    
+                    <h3> Cost: ${services[3].cost}</h3>
+                    <Link to="/order-form/4" element={<OrderType4 />}>
+                        <button type="button" >Request Service</button>
+                    </Link> 
                 </div>
 
                 <div className='service-item'>
                     <h2> {services[4].service} </h2>
                     <img src={services[4].image}  alt="Crankcase Vapor Blasting "></img>
-                    <h3> Cost: {services[4].cost}</h3>
-                    
+                    <h3> Cost: ${services[4].cost}</h3>
+                    <Link to="/order-form/5" element={<OrderType5 />}>
+                        <button type="button" >Request Service</button>
+                    </Link> 
                 </div>
 
                 <div className='service-item'>
                     <h2> {services[5].service} </h2>
                     <img src = {services[5].image} alt="Custom Work"/>
                     <h3>Ask for Pricing</h3>
-                    
+                    <Link to="/order-form/6" element={<OrderCustom />}>
+                        <button type="button" >Request Service</button>
+                    </Link> 
                 </div>
             
             </div> 
 
-            <Link to="/order-form" element={<Order />}>
-                    <button type="button">Select Services</button>
-                </Link>
+            {/* <Link to="/order-form" element={<Order />}>
+                    <button type="button">Complete Order</button>
+                </Link> */}
     </div>
     )
 
