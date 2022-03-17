@@ -35,31 +35,28 @@ export default function OrderType3 () {
       
     <div className="forms">
         <form className='order-form'>
-        <h3>Requested Service: Cylinders/Heads Vapor Blasting</h3>
-                    
+        <h3>Requested Service: Cylinders/Heads Vapor Blasting</h3>  
         <p>
-            <label for="part">Part:</label>
-            <input id="part" name="part" type="text"/>
-        </p>
-        <p>
-            <label for="make">Make:</label>
-            <input id="make" name="make" type="text"/>
-        </p>
-        <p>
-            <label for="model">Model:</label>
-            <input id="model" name="model" type="text"/>
-        </p>
-        <p>
-            <label for="year">Year:</label>
-            <input id="year" name = "model" type="text"/>
-        </p>
+                    <label for="make">Make:</label>
+                    <input id="make" name="make" type="text"
+                    onChange={(e) => setMake(e.target.value)}/>
+                </p>
+                <p>
+                    <label for="model">Model:</label>
+                    <input id="model" name="model" type="text"
+                    onChange={(e) => setModel(e.target.value)}/>
+                </p>
+                <p>
+                    <label for="year">Year:</label>
+                    <input id="year" name = "model" type="text"
+                    onChange={(e) => setYear(e.target.value)}/>
+                </p>
+
         <p>
             <h3>Cost: $75</h3>
         </p>
 
-        <button type="submit">Submit Order
-        
-        </button>
+        <button type="submit" className = "submitBtn"> Submit Order </button>
         </form> 
     </div>
     )}

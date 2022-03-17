@@ -50,14 +50,14 @@ export default function Login() {
                     <input for="username" type="password" />
                 </p>
                 <Link to="/services" element={<Services />}>
-                <button onClick={e => sendLogin(e)} type="submit">Login</button>
+                <button onClick={e => sendLogin(e)} type="submit" className = "submitBtn">Login</button>
                 </Link>
             </form>
 
             <h2>Don't have an account?</h2>
             <form>
                 <Link to="/register" element={<Register />}>
-                    <button type="button">Register Here</button>
+                    <button type="button" className = "submitBtn">Register Here</button>
                 </Link>
             </form>
         </div>

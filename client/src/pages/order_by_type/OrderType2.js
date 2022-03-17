@@ -56,7 +56,7 @@ export default function OrderType2 () {
 
                 <h3>Cost: $20</h3>
 
-                <button type="submit">Submit Order</button>
+                <button type="submit" className = "submitBtn">Submit Order</button>
 
                 <div className="message">{message ? <p>{message}</p> : null}</div>
 

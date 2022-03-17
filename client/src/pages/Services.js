@@ -71,7 +71,7 @@ export default function Register (){
                     <img src={services[0].image} alt="Carburetor Vapor Blasting"></img>
                      <h3>Cost: ${services[0].cost}</h3>
                      <Link to="/order-form/" element={<OrderForm />}>
-                        <button type="button">Request Service</button>
+                        <button type="button" className = "submitBtn">Request Service</button>
                     </Link> 
                  </div>
                 <div className='service-item'>
@@ -81,7 +81,7 @@ export default function Register (){
                     {/* {let cost1 = services[1].cost} */}
                     <h3> Cost: ${services[1].cost}</h3>
                     <Link to="/order-form/2" element={<OrderType2 />}>
-                        <button type="button" >Request Service</button>
+                        <button type="button" className = "submitBtn">Request Service</button>
                     </Link> 
                 </div>
 
@@ -90,7 +90,7 @@ export default function Register (){
                     <img src={services[2].image}  alt="Cylinders/Heads Vapor Blasting "></img>
                     <h3> Cost: ${services[2].cost}</h3>
                     <Link to="/order-form/3" element={<OrderType3 />}>    
-                        <button type="button" >Request Service</button>
+                        <button type="button" className = "submitBtn">Request Service</button>
                     </Link> 
                 </div>
 
@@ -99,7 +99,7 @@ export default function Register (){
                     <img src={services[3].image}  alt="Valve Cover Vapor Blasting "></img>
                     <h3> Cost: ${services[3].cost}</h3>
                     <Link to="/order-form/4" element={<OrderType4 />}>
-                        <button type="button" >Request Service</button>
+                        <button type="button" className = "submitBtn">Request Service</button>
                     </Link> 
                 </div>
 
@@ -108,7 +108,7 @@ export default function Register (){
                     <img src={services[4].image}  alt="Crankcase Vapor Blasting "></img>
                     <h3> Cost: ${services[4].cost}</h3>
                     <Link to="/order-form/5" element={<OrderType5 />}>
-                        <button type="button" >Request Service</button>
+                        <button type="button" className = "submitBtn" >Request Service</button>
                     </Link> 
                 </div>
 
@@ -117,7 +117,7 @@ export default function Register (){
                     <img src = {services[5].image} alt="Custom Work"/>
                     <h3>Ask for Pricing</h3>
                     <Link to="/order-form/6" element={<OrderCustom />}>
-                        <button type="button" >Request Service</button>
+                        <button type="button" className = "submitBtn">Request Service</button>
                     </Link> 
                 </div>
             

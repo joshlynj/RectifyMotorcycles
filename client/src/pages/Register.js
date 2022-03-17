@@ -79,7 +79,7 @@ export default function Register (){
                     onChange={(e) => setPhone_number((e.target.value))}/>
                 </p>
 
-                <button type="submit">Create Account</button>
+                <button type="submit" className = "submitBtn">Create Account</button>
             </form>
     </div> 
     ) 

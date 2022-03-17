@@ -130,6 +130,25 @@
   flex-direction: column;
   align-items: center;
 }
+ 
+.submitBtn {
+  width: 200px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #1c89ff;
+  border: solid 1px transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+  }
+
+  .submitBtn:hover{
+    background-color: darkblue;
+    border-color: #fff;
+    transition: all .1s ease-in-out;
+  }
 
 .login-form {
   padding: 50px 50px;
