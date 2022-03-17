@@ -1,16 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-import Register from './Register.js';
-import { Link } from 'react-router-dom';
 import './pages.css';
-import totalCost from './Services.js'
 
 
 
 export default function Order (){
 
-    const [service, setService] = useState("");
-    const [part, setPart] = useState("");
     const [make, setMake] = useState("");
     const [model, setModel] = useState("");
     const [year, setYear] = useState("");
@@ -29,7 +24,7 @@ export default function Order (){
           body: JSON.stringify({
             service_id: 1,
             completion_status: false,
-            part: part,
+            part: "Carburetor",
             make: make,
             model: model,
             year: year,
@@ -46,12 +41,6 @@ export default function Order (){
         <h1>Place Your Order Here</h1>
             <form className='order-form' onSubmit={handleSubmit}>
                 <h3>Requested Service: Carburetor Vapor Blasting</h3>
-                
-                <p>
-                    <label for="part">Part:</label>
-                    <input id="part" name="part" type="text"
-                    onChange={(e) => setPart((e.target.value))}/>
-                </p>
                 <p>
                     <label for="make">Make:</label>
                     <input id="make" name="make" type="text"
@@ -70,7 +59,7 @@ export default function Order (){
 
                 <h3>Cost: $70</h3>
 
-                <button type="submit">Submit Form</button>
+                <button type="submit">Submit Order</button>
 
                 <div className="message">{message ? <p>{message}</p> : null}</div>
 

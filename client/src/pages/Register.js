@@ -50,7 +50,7 @@ export default function Register (){
                 </p>
                 <p>
                     <label for="password">Password:</label>
-                    <input type="text"
+                    <input type="password"
                     onChange={(e) => setPassword((e.target.value))}/>
                 </p>
                 <p>

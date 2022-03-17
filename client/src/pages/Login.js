@@ -40,20 +40,19 @@ export default function Login() {
     return (
         <div className="forms">
             <h1>Please Login</h1>
-            <form>
+            <form className="login-form">
                 <p>
-                    <label>username:</label>
+                    <label>Username:</label>
                     <input for="username" type="text" />
                 </p>
                 <p>
-                    <label>password:</label>
+                    <label>Password:</label>
                     <input for="username" type="password" />
                 </p>
                 <Link to="/services" element={<Services />}>
                 <button onClick={e => sendLogin(e)} type="submit">Login</button>
                 </Link>
             </form>
-            
 
             <h2>Don't have an account?</h2>
             <form>

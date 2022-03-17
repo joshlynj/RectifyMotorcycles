@@ -1,7 +1,35 @@
 import React from "react"
 import '../pages.css';
+import { useState } from 'react';
 
 export default function OrderType3 () {
+
+    const [make, setMake] = useState("");
+    const [model, setModel] = useState("");
+    const [year, setYear] = useState("");
+    const [message, setMessage] = useState("");
+    
+    let handleSubmit = (e) => {
+        e.preventDefault();
+          fetch('http://localhost:8080/orders', {
+            headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+             },
+            method: "POST",
+            body: JSON.stringify({
+              service_id: 3,
+              completion_status: false,
+              part: "Cylinders/Heads",
+              make: make,
+              model: model,
+              year: year,
+              message: message
+            }),
+          })
+          .then((res) => res.json())
+          .catch((err) => console.log(err))
+        }
     
     return (
       
@@ -29,7 +57,7 @@ export default function OrderType3 () {
             <h3>Cost: $75</h3>
         </p>
 
-        <button type="submit">Submit Form
+        <button type="submit">Submit Order
         
         </button>
         </form> 
