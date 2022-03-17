@@ -87,8 +87,7 @@ ZaaS uses a PostgreSQL docker container. Tables are created programaticly, but y
 
 ##  🚀 Database Schema
 This was made with PostgreSQL DB to persist user data, maintain services, maintain orders, and provide relations between orders and services.
-![image](https://user-images.githubusercontent.com/96899068/158684855-b15e0944-33c1-4cdc-a5c1-a26485ba30c0.png)
-
+![image](https://user-images.githubusercontent.com/96899068/158829397-8b096b96-d50d-43da-a083-5056517d493a.png)
 
 This schema is created through the Knex Migrations and is built with command: ``` npx knex migrate:latest ```
 
